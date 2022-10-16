@@ -15,14 +15,86 @@ For support, email admin@marxvim.com.
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+## Links
+* [local Terminal](http://localhost:8080/)
+
+* [local API](http://localhost:8080/fhir)
+
+## Running locally
+
+The easiest way to run this server entirely depends on your environment requirements. At least, the following 4 ways are supported:
+
+### Using jetty
+```bash
+mvn jetty:run
+```
 
 
-## Setup
-- run the following CLI commands
-  - [ ] mvn clean install
-  - [ ] mvn spring-boot:run
-  
-  ## Used By
+If you need to run this server on a different port (using Maven), you can change the port in the run command as follows:
+
+```bash
+mvn -Djetty.port=8888 jetty:run
+```
+
+Server will then be accessible at http://localhost:8888/ and eg. http://localhost:8888/fhir/metadata. Remember to adjust you overlay configuration in the application.yaml to eg.
+
+```yaml
+    tester:
+      -
+          id: home
+          name: Local Tester
+          server_address: 'http://localhost:8888/fhir'
+          refuse_to_fetch_third_party_urls: false
+          fhir_version: R4
+```
+
+### Using Spring Boot with :run
+```bash
+mvn clean spring-boot:run -Pboot
+```
+Server will then be accessible at http://localhost:8080/ and eg. http://localhost:8080/fhir/metadata. Remember to adjust you overlay configuration in the application.yaml to eg.
+
+```yaml
+    tester:
+      -
+          id: home
+          name: Local Tester
+          server_address: 'http://localhost:8080/fhir'
+          refuse_to_fetch_third_party_urls: false
+          fhir_version: R4
+```
+
+### Using Spring Boot
+```bash
+mvn clean package spring-boot:repackage -Pboot && java -jar target/ROOT.war
+```
+Server will then be accessible at http://localhost:8080/ and eg. http://localhost:8080/fhir/metadata. Remember to adjust you overlay configuration in the application.yaml to eg.
+
+```yaml
+    tester:
+      -
+          id: home
+          name: Local Tester
+          server_address: 'http://localhost:8080/fhir'
+          refuse_to_fetch_third_party_urls: false
+          fhir_version: R4
+```
+### Using Spring Boot and Google distroless
+```bash
+mvn clean package com.google.cloud.tools:jib-maven-plugin:dockerBuild -Dimage=distroless-hapi && docker run -p 8080:8080 distroless-hapi
+```
+Server will then be accessible at http://localhost:8080/ and eg. http://localhost:8080/fhir/metadata. Remember to adjust you overlay configuration in the application.yaml to eg.
+
+```yaml
+    tester:
+      -
+          id: home
+          name: Local Tester
+          server_address: 'http://localhost:8080/fhir'
+          refuse_to_fetch_third_party_urls: false
+          fhir_version: R4
+```
+## Used By
 
 This project is used by the following companies:
 

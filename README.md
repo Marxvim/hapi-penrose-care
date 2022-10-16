@@ -1,6 +1,6 @@
 # PENROSE CARE
 ### Marxvim 2023
-Penrose Care Application Programming Interface is an implementation of the FHIR specification in java. It allows the exchange of data in a modern and developer friendly way :)
+Penrose Care Application Programming Interface is an implementation of the FHIR specification in java. It allows the exchange of data in a modern and developer friendly way
 <p align="center" width="100%">
     <img width="50%" src="https://user-images.githubusercontent.com/40407778/196060045-2bfb19aa-98d3-485f-a8f8-57291ea63597.png">
 </p>

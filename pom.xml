@@ -21,7 +21,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <prerequisites>
@@ -143,12 +143,6 @@
             <artifactId>hapi-fhir-testpage-overlay</artifactId>
             <version>${project.version}</version>
             <classifier>classes</classifier>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-enforcer-plugin</artifactId>
-            <version>3.1.0</version>
         </dependency>
 
         <!-- HAPI-FHIR uses Logback for logging support. The logback library is included automatically by Maven as a part of the hapi-fhir-base dependency, but you also need to include a logging library. Logback

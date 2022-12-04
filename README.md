@@ -99,7 +99,6 @@ Server will then be accessible at http://localhost:8080/ and eg. http://localhos
 This project is used by the following companies:
 
 - Marxvim
-visit www.marxvim.com to learn more.
 
 ## Badges
 

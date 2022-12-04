@@ -10,3 +10,4 @@ target/jacoco.exec
 target/*.original
 .idea
 .git
+src/test

@@ -84,17 +84,17 @@
             <version>${project.version}</version>
         </dependency>
         <!-- This dependency includes the EmailSenderImpl we will be using instead of standard javamail.-->
-        <dependency>
-            <groupId>ca.uhn.hapi.fhir</groupId>
-            <artifactId>hapi-fhir-jpaserver-subscription</artifactId>
-            <version>${project.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.zaxxer</groupId>
-                    <artifactId>HikariCP-java7</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ca.uhn.hapi.fhir</groupId>-->
+<!--            <artifactId>hapi-fhir-jpaserver-subscription</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>com.zaxxer</groupId>-->
+<!--                    <artifactId>HikariCP-java7</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
 
         <!-- This dependency includes the JPA server itself, which is packaged separately from the rest of HAPI FHIR -->
         <dependency>

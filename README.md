@@ -16,7 +16,7 @@ For support, email admin@marxvim.com.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## Links
-* [local Terminal](http://localhost:8080/)
+* [local Terminal](http://see-k-ominous-xylophone-g5j6g69wrqj3vxrj-8080.preview.app.github.dev:8080/)
 
 * [local API](http://localhost:8080/fhir)
 

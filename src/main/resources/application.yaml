@@ -14,9 +14,9 @@ spring:
     check-location: false
     baselineOnMigrate: true
   datasource:
-    url: 'jdbc:postgresql://ec2-34-233-115-14.compute-1.amazonaws.com:5432/d30papj0h25f5t'
-    username: geeobijphmrrsv
-    password: 36755e884198d5916290bcd466f73c09263ee30cc00dedbf4a629ce054a7b93d
+    url: 'jdbc:postgresql://ec2-52-23-81-126.compute-1.amazonaws.com:5432/ddltt16s3e821t'
+    username: bhegpaqbgdrsar
+    password: a2446244e9a02a2ec95e3bb0dae24c8b83a37f2d2b3a707141c0451e348cfac1
     driverClassName: org.postgresql.Driver
     max-active: 15
 
